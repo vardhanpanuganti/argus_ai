@@ -1,0 +1,356 @@
+.ai-section{
+    padding:140px 0;
+    background:linear-gradient(to bottom,#081A30,#071224);
+    position:relative;
+    overflow:hidden;
+}
+
+.ai-section::before{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    left:-250px;
+    top:-200px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(59,130,246,.10),transparent 70%);
+    pointer-events:none;
+}
+
+.ai-container{
+    width:min(92%,1400px);
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+/* ================= LEFT ================= */
+
+.ai-tag{
+    display:inline-block;
+    color:#5AA8FF;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.ai-left h2{
+    color:#fff;
+    font-size:56px;
+    line-height:1.08;
+    letter-spacing:-2px;
+    margin-bottom:28px;
+}
+
+.ai-left p{
+    color:#A8B7D8;
+    font-size:19px;
+    line-height:1.8;
+    margin-bottom:40px;
+    max-width:560px;
+}
+
+/* ================= PROMPT ================= */
+
+.prompt-box{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.prompt-box textarea{
+
+    min-height:180px;
+
+    resize:none;
+
+    padding:22px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+    backdrop-filter:blur(20px);
+
+}
+
+.prompt-box textarea::placeholder{
+
+    color:#8EA8CF;
+
+}
+
+.generate-btn{
+
+    width:max-content;
+
+    padding:18px 34px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#3B82F6;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.generate-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 40px rgba(59,130,246,.35);
+
+}
+
+/* ================= CHAT ================= */
+
+.chat-window{
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(24px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.30);
+
+}
+
+.chat-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:20px 24px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.status{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#34D399;
+
+    box-shadow:0 0 15px #34D399;
+
+}
+
+.chat-header h4{
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.chat-body{
+
+    padding:26px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.ai-message,
+.user-message{
+
+    padding:18px 20px;
+
+    border-radius:18px;
+
+    line-height:1.7;
+
+}
+
+.ai-message{
+
+    background:rgba(255,255,255,.06);
+
+    color:#D8E5F7;
+
+}
+
+.user-message{
+
+    background:#2563EB;
+
+    color:white;
+
+    align-self:flex-end;
+
+    max-width:80%;
+
+}
+
+.ai-message h5{
+
+    color:white;
+
+    font-size:20px;
+
+    margin-bottom:16px;
+
+}
+
+.ai-message ul{
+
+    padding-left:18px;
+
+}
+
+.ai-message li{
+
+    margin-bottom:10px;
+
+    color:#BFD0EB;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px){
+
+.ai-container{
+
+grid-template-columns:1fr;
+
+}
+
+.ai-left{
+
+text-align:center;
+
+}
+
+.ai-left p{
+
+margin:auto auto 40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.ai-section{
+
+padding:90px 0;
+
+}
+
+.ai-left h2{
+
+font-size:42px;
+
+}
+
+.generate-btn{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.ai-left h2{
+
+font-size:34px;
+
+}
+
+.chat-body{
+
+padding:18px;
+
+}
+
+.prompt-box textarea{
+
+min-height:140px;
+
+}
+
+}
+
+/* ================= MARKDOWN ================= */
+
+.ai-message h1,
+.ai-message h2,
+.ai-message h3,
+.ai-message h4{
+    color:#ffffff;
+    margin:18px 0 10px;
+}
+
+.ai-message p{
+    color:#d8e5ff;
+    line-height:1.8;
+    margin:10px 0;
+}
+
+.ai-message ul{
+    margin:12px 0;
+    padding-left:22px;
+}
+
+.ai-message li{
+    margin:8px 0;
+}
+
+.ai-message strong{
+    color:#58a6ff;
+}
+
+.ai-message code{
+    background:rgba(255,255,255,.08);
+    padding:2px 6px;
+    border-radius:6px;
+}
+
+.ai-message hr{
+    border:none;
+    border-top:1px solid rgba(255,255,255,.08);
+    margin:18px 0;
+}

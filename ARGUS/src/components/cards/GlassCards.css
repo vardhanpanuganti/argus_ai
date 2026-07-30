@@ -1,0 +1,97 @@
+.glass-card{
+
+    position:absolute;
+
+    width:220px;
+
+    padding:20px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(25px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+    animation:float 6s ease-in-out infinite;
+
+}
+
+.glass-card h4{
+
+    margin-bottom:10px;
+
+    font-size:20px;
+
+}
+
+.glass-card p{
+
+    color:#7bc0ff;
+
+    margin-bottom:8px;
+
+}
+
+.glass-card span{
+
+    color:#9fb8da;
+
+    font-size:14px;
+
+}
+
+.card1{
+
+    top:90px;
+
+    right:30px;
+
+}
+
+.card2{
+
+    bottom:160px;
+
+    left:-40px;
+
+    animation-delay:1s;
+
+}
+
+.card3{
+
+    bottom:40px;
+
+    right:20px;
+
+    animation-delay:2s;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}

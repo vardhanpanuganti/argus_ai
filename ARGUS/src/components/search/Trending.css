@@ -1,0 +1,51 @@
+.trending{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-top:28px;
+
+}
+
+.title{
+
+    color:#8aa0c5;
+
+    font-size:15px;
+
+    margin-right:5px;
+
+}
+
+.chip{
+
+    border:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+
+}
+
+.chip:hover{
+
+    background:#3b82f6;
+
+    transform:translateY(-2px);
+
+}
