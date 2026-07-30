@@ -1,6 +1,6 @@
 export async function generateTravelPlan(prompt) {
 
-  const response = await fetch("http://localhost:5000/api/chat", {
+  const response = await fetch("https://argus-ai-backend-9wd0.onrender.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
