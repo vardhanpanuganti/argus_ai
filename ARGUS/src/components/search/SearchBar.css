@@ -1,13 +1,33 @@
+/* =====================================
+            SEARCH WRAPPER
+===================================== */
+
 .search-wrapper{
     width:100%;
+    max-width:560px;
 }
-.search-bar{
 
-    margin-top:40px;
+/* =====================================
+             SEARCH BAR
+===================================== */
+
+.search-bar{
 
     width:100%;
 
-    height:72px;
+    min-height:72px;
+
+    margin-top:2.5rem;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+    padding:12px;
 
     border-radius:22px;
 
@@ -17,27 +37,27 @@
 
     backdrop-filter:blur(20px);
 
-    display:flex;
+    -webkit-backdrop-filter:blur(20px);
 
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:0 12px 0 22px;
-
-    transition:.35s;
+    transition:.35s ease;
 
 }
 
 .search-bar:hover{
 
-    border-color:#4da6ff;
+    border-color:#4DA6FF;
 
-    box-shadow:0 0 30px rgba(77,166,255,.18);
+    box-shadow:0 0 35px rgba(77,166,255,.18);
 
 }
 
+/* =====================================
+            LEFT
+===================================== */
+
 .search-left{
+
+    flex:1;
 
     display:flex;
 
@@ -45,9 +65,15 @@
 
     gap:14px;
 
-    color:#7dafff;
+    min-width:0;
 
-    flex:1;
+    color:#6FB3FF;
+
+}
+
+.search-left svg{
+
+    flex-shrink:0;
 
 }
 
@@ -63,41 +89,57 @@
 
     color:white;
 
-    font-size:18px;
+    font-size:1rem;
+
+    font-weight:500;
 
 }
 
 .search-left input::placeholder{
 
-    color:#8aa0c5;
+    color:#90A8CC;
 
 }
 
+/* =====================================
+           BUTTON
+===================================== */
+
 .ai-button{
 
-    height:50px;
+    flex-shrink:0;
+
+    height:48px;
 
     padding:0 22px;
 
     border:none;
 
-    border-radius:15px;
+    border-radius:14px;
 
-    background:linear-gradient(135deg,#3d8cff,#63d4ff);
+    background:linear-gradient(
+        135deg,
+        #3D8CFF,
+        #63D4FF
+    );
 
     color:white;
+
+    font-size:.95rem;
+
+    font-weight:600;
 
     display:flex;
 
     align-items:center;
 
+    justify-content:center;
+
     gap:10px;
 
     cursor:pointer;
 
-    font-weight:600;
-
-    transition:.3s;
+    transition:.3s ease;
 
 }
 
@@ -105,6 +147,106 @@
 
     transform:translateY(-2px);
 
-    box-shadow:0 10px 30px rgba(77,166,255,.45);
+    box-shadow:0 12px 28px rgba(61,140,255,.35);
+
+}
+
+.ai-button:active{
+
+    transform:scale(.98);
+
+}
+
+/* =====================================
+          TABLET
+===================================== */
+
+@media(max-width:768px){
+
+.search-bar{
+
+    min-height:64px;
+
+    padding:10px;
+
+}
+
+.search-left input{
+
+    font-size:.95rem;
+
+}
+
+.ai-button{
+
+    height:44px;
+
+    padding:0 18px;
+
+    font-size:.9rem;
+
+}
+
+}
+
+/* =====================================
+            MOBILE
+===================================== */
+
+@media(max-width:480px){
+
+.search-bar{
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    padding:14px;
+
+    gap:14px;
+
+    min-height:auto;
+
+}
+
+.search-left{
+
+    width:100%;
+
+}
+
+.search-left input{
+
+    font-size:.95rem;
+
+}
+
+.ai-button{
+
+    width:100%;
+
+    height:46px;
+
+}
+
+}
+
+/* =====================================
+         SMALL MOBILE
+===================================== */
+
+@media(max-width:360px){
+
+.search-left input{
+
+    font-size:.9rem;
+
+}
+
+.ai-button{
+
+    font-size:.88rem;
+
+}
 
 }

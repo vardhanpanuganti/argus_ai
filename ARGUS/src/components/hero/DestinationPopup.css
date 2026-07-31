@@ -1,0 +1,412 @@
+/* =====================================
+        DESTINATION POPUP
+===================================== */
+
+.destination-popup{
+
+    position:absolute;
+
+    top:50%;
+
+    right:-60px;
+
+    transform:translateY(-50%);
+
+    width:min(380px,90vw);
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:rgba(15,25,45,.82);
+
+    backdrop-filter:blur(28px);
+
+    -webkit-backdrop-filter:blur(28px);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.45);
+
+    animation:popupIn .45s ease;
+
+    z-index:20;
+
+}
+
+/* =====================================
+        CLOSE BUTTON
+===================================== */
+
+.popup-close{
+
+    position:absolute;
+
+    top:16px;
+
+    right:16px;
+
+    width:38px;
+
+    height:38px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    z-index:5;
+
+}
+
+.popup-close:hover{
+
+    background:#3B82F6;
+
+    transform:rotate(90deg);
+
+}
+
+/* =====================================
+          IMAGE
+===================================== */
+
+.popup-image{
+
+    width:100%;
+
+    height:190px;
+
+    object-fit:cover;
+
+}
+
+/* =====================================
+          CONTENT
+===================================== */
+
+.popup-content{
+
+    padding:24px;
+
+}
+
+.popup-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:20px;
+
+}
+
+.popup-flag{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid rgba(255,255,255,.18);
+
+}
+
+.popup-title h2{
+
+    color:#fff;
+
+    margin:0;
+
+    font-size:1.7rem;
+
+}
+
+.popup-title p{
+
+    margin-top:4px;
+
+    color:#AFC4E8;
+
+}
+
+/* =====================================
+             STATS
+===================================== */
+
+.popup-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+
+    margin:20px 0;
+
+}
+
+.popup-stat{
+
+    padding:14px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.05);
+
+    text-align:center;
+
+}
+
+.popup-stat span{
+
+    display:block;
+
+    font-size:1.3rem;
+
+    margin-bottom:8px;
+
+}
+
+.popup-stat p{
+
+    color:white;
+
+    font-weight:600;
+
+    margin:0;
+
+    font-size:.9rem;
+
+}
+
+/* =====================================
+        WEATHER
+===================================== */
+
+.popup-weather{
+
+    color:#6EC1FF;
+
+    font-weight:600;
+
+    margin-bottom:16px;
+
+}
+
+/* =====================================
+      DESCRIPTION
+===================================== */
+
+.popup-description{
+
+    color:#D5DDEE;
+
+    line-height:1.75;
+
+    margin-bottom:24px;
+
+    font-size:.96rem;
+
+}
+
+/* =====================================
+          BUTTONS
+===================================== */
+
+.popup-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.popup-buttons button{
+
+    flex:1;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    background:#2563EB;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.popup-buttons button:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+}
+
+/* =====================================
+          TABLET
+===================================== */
+
+@media(max-width:992px){
+
+.destination-popup{
+
+    position:relative;
+
+    top:auto;
+
+    right:auto;
+
+    transform:none;
+
+    width:min(95vw,500px);
+
+    margin:2rem auto 0;
+
+}
+
+}
+
+/* =====================================
+          MOBILE
+===================================== */
+
+@media(max-width:768px){
+
+.popup-image{
+
+    height:170px;
+
+}
+
+.popup-content{
+
+    padding:20px;
+
+}
+
+.popup-title{
+
+    gap:12px;
+
+}
+
+.popup-title h2{
+
+    font-size:1.4rem;
+
+}
+
+.popup-stat{
+
+    padding:10px;
+
+}
+
+.popup-stat span{
+
+    font-size:1.1rem;
+
+}
+
+.popup-description{
+
+    font-size:.92rem;
+
+}
+
+}
+
+/* =====================================
+        SMALL MOBILE
+===================================== */
+
+@media(max-width:480px){
+
+.destination-popup{
+
+    width:95vw;
+
+    border-radius:22px;
+
+}
+
+.popup-image{
+
+    height:150px;
+
+}
+
+.popup-title{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.popup-stats{
+
+    grid-template-columns:1fr;
+
+}
+
+.popup-buttons{
+
+    flex-direction:column;
+
+}
+
+.popup-buttons button{
+
+    width:100%;
+
+}
+
+}
+
+/* =====================================
+            ANIMATION
+===================================== */
+
+@keyframes popupIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(-50%) translateX(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(-50%) translateX(0);
+
+}
+
+}

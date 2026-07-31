@@ -1,0 +1,148 @@
+.orbit-badges{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+.orbit-badge{
+
+    position:absolute;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 16px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:white;
+
+    cursor:pointer;
+
+    pointer-events:auto;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.orbit-badge:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 25px rgba(59,130,246,.45);
+
+}
+
+.orbit-badge img{
+
+    width:28px;
+
+    height:28px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.orbit-badge span{
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* Desktop */
+
+.top{
+
+    top:12%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+.left{
+
+    left:5%;
+
+    top:52%;
+
+}
+
+.right{
+
+    right:5%;
+
+    top:52%;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.top{
+
+    top:10%;
+
+}
+
+.left{
+
+    left:2%;
+
+    top:55%;
+
+}
+
+.right{
+
+    right:2%;
+
+    top:55%;
+
+}
+
+.orbit-badge{
+
+    padding:8px 12px;
+
+}
+
+.orbit-badge img{
+
+    width:24px;
+
+    height:24px;
+
+}
+
+.orbit-badge span{
+
+    font-size:13px;
+
+}
+
+}

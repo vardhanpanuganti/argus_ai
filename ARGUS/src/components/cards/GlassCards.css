@@ -95,3 +95,75 @@ transform:translateY(0px);
 }
 
 }
+
+/* ==========================
+        MOBILE GLASS CARDS
+========================== */
+
+@media (max-width:768px){
+
+.glass-card{
+
+    width:145px;
+
+    padding:14px;
+
+    border-radius:18px;
+
+}
+
+.glass-card h4{
+
+    font-size:18px;
+
+}
+
+.glass-card p{
+
+    font-size:14px;
+
+}
+
+.glass-card span{
+
+    font-size:12px;
+
+}
+
+/* Top Right */
+
+.card1{
+
+    top:35px;
+
+    right:-10px;
+
+}
+
+/* Top Left */
+
+.card2{
+
+    top:30px;
+
+    left:-15px;
+
+    bottom:auto;
+
+}
+
+/* Bottom Center */
+
+.card3{
+
+    bottom:20px;
+
+    left:50%;
+
+    right:auto;
+
+    transform:translateX(-50%);
+
+}
+
+}
