@@ -5,7 +5,7 @@ import * as THREE from "three";
 import Earth from "./Earth";
 import Clouds from "./Clouds";
 import Atmosphere from "./Atmosphere";
-import Markers from "./markers/Markers";
+import Markers from "./Markers/Markers";
 
 import latLngToRotation from "./helpers/latLngToRotation";
 
